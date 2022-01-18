@@ -12,7 +12,7 @@ export class UserService {
 
   public async getAllUsers() {
     const users = await this.userRepositpry.find();
-    this.logger.log('get all users of count: ' + users && users.length);
+    this.logger.log('get all users of count: '.concat(users && (users.length as unknown as string)));
     return users.length > 0 ? users : new HttpException('users not found', 404);
   }
 
