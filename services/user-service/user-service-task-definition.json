@@ -1,0 +1,136 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:265135825195:task-definition/user-service:4",
+    "containerDefinitions": [
+        {
+            "name": "user-container",
+            "image": "265135825195.dkr.ecr.ap-southeast-1.amazonaws.com/user-service:latest",
+            "cpu": 0,
+            "links": [],
+            "portMappings": [
+                {
+                    "containerPort": 3001,
+                    "hostPort": 3001,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "entryPoint": [],
+            "command": [],
+            "environment": [
+                {
+                    "name": "PORT",
+                    "value": "3001"
+                },
+                {
+                    "name": "DB_USERNAME",
+                    "value": "postgres"
+                },
+                {
+                    "name": "DB_PORT",
+                    "value": "5432"
+                },
+                {
+                    "name": "CONTEXT_PATH",
+                    "value": "user-service"
+                },
+                {
+                    "name": "DB_NAME",
+                    "value": "postgres"
+                },
+                {
+                    "name": "DB_HOST",
+                    "value": "database-1.c9dcivve8f4i.ap-southeast-1.rds.amazonaws.com"
+                },
+                {
+                    "name": "DB_SCHEMA",
+                    "value": "public"
+                },
+                {
+                    "name": "DB_PASSWORD",
+                    "value": "postgres"
+                }
+            ],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "dnsServers": [],
+            "dnsSearchDomains": [],
+            "dockerSecurityOptions": [],
+            "dockerLabels": {},
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-create-group": "true",
+                    "awslogs-group": "/ecs/user-service",
+                    "awslogs-region": "ap-southeast-1",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            },
+            "systemControls": []
+        }
+    ],
+    "family": "user-service",
+    "taskRoleArn": "arn:aws:iam::265135825195:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::265135825195:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 4,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "512",
+    "memory": "1024",
+    "registeredAt": "2022-01-15T10:21:30.464Z",
+    "registeredBy": "arn:aws:iam::265135825195:user/hasitha@fcodelabs.com",
+    "tags": [
+        {
+            "key": "ecs:taskDefinition:createdFrom",
+            "value": "ecs-console-v2"
+        },
+        {
+            "key": "ecs:taskDefinition:stackId",
+            "value": "arn:aws:cloudformation:ap-southeast-1:265135825195:stack/ECS-Console-V2-TaskDefinition-4f6b261e-4711-4475-aa1f-27f424058481/03df9e00-75c0-11ec-9cb5-026ca6728f9a"
+        }
+    ]
+}
