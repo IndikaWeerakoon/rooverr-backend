@@ -30,6 +30,9 @@ on:
   push:
     branches:
       - main
+    paths:
+      - '.github/workflows/**'
+      - './services/user-service/package*.json'
 
 env:
   AWS_REGION: ap-southeast-1                   # set this to your preferred AWS region, e.g. us-west-1
