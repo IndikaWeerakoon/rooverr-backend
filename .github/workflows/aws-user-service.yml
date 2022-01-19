@@ -36,7 +36,7 @@ env:
   ECR_REPOSITORY: user-service           # set this to your Amazon ECR repository name
   ECS_SERVICE: user-svc                 # set this to your Amazon ECS service name
   ECS_CLUSTER: rooverr-cluster                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: user-service # set this to the path to your Amazon ECS task definition
+  ECS_TASK_DEFINITION: .aws/user-service.json # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: user-container           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
